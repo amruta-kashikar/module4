@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style/style.css">
 <link href="musiclogo.ico" rel="icon" type="image/x-icon" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <!-- this is holding all the contents -->
@@ -22,27 +23,32 @@
             
                 <li class="nav_menuitems">
                     <a href="">
-                        <p>Home</p>
+                        <img src="images/dashboard.png" alt="">
+                        <span style="padding: 20px;">Home</span>
                     </a>
                 </li>
                 <li class="nav_menuitems active">
                     <a href="">
-                        <p>Browse</p>
+                        <img src="images/allcourse.png" alt="">
+                        <span>Browse</span>
                     </a>
                 </li>
                 <li class="nav_menuitems">
                     <a href="">
-                        <p>Liked</p>
+                        <img src="images/chat.png" alt="">
+                        <span>Liked</span>
                     </a>
                 </li>
                 <li class="nav_menuitems">
                     <a href="">
-                        <p>Artist</p>
+                        <img src="images/profile.png" alt="">
+                        <span>Artist</span>
                     </a>
                 </li>
                 <li class="nav_menuitems">
                     <a href="">
-                        <p>Setting</p>
+                        <img src="images/settings.png" alt="">
+                        <span>Settings</span>
                     </a>
                 </li>
                 <div class="nav_footer">
@@ -57,22 +63,34 @@
         <!-- main content -->
         <div class="main">
             <!-- this is for searchbar -->
-            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-            <input type="text" placeholder="Search for....">
+            <div class="input-group input_contain mb-3">
+                <div class="input-group-append">
+                    <span class="btn input_button" id="basic-addon2"><i class="fa fa-search" aria-hidden="true"></i>
+                    </span>
+                  </div>
+                <input type="text" class="form-control input_field" placeholder="Search for.." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                
+              </div>
             <!-- this is for nav menu -->
-            <div class="navbar">
-                <div class="heading">
-                    <h2>Billboard Topchart</h2>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="head_contain">
+                    <h1>Billboard Topchart</h1>
                     <p>25 Albums</p>
                 </div>
-                <nav>
-                    <ul >
-                        <li class="main_nav_menuitems active1"><a href="#"><p>Ongoing</p></a></li>
-                        <li class="main_nav_menuitems"><a href="#"><p>Favourite</p></a></li>
-                        <li class="main_nav_menuitems"><a href="#"><p>Saved</p></a></li>
-                    </ul>
-                </nav>
-            </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Ongoing <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Favourite</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Saved</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
             <!-- this is for albums -->
             <div class="albums">
                 <div class="row">
@@ -94,6 +112,14 @@
                     <h2>Most Popular</h2>
                     <p>80 songs</p>
                 </div>
+                <div class="song">
+                    <span class="song_number">01</span>
+                    <img src="images/beach.jpg" alt="">
+                    <span class="song_name">coloring book</span>
+                    <span class="song_artist">pop king</span>
+                    <span class="song_time"><i class="fa fa-heart-o" aria-hidden="true"></i>
+                    </span>
+                </div>
             </div>
         </div>
 
@@ -103,11 +129,26 @@
             <div class="titlehead">
                 <h1><b>Beliver</b></h1>
                 <p>Imagine Dragons</p>
-                <img src="images/road.jpg" alt="">
+                <img id="musicimg" src="images/road.jpg" alt="">
+                <audio id="music" src="audio/audio1.mp3"></audio>
+                
             </div>
+            <div class="controller">
+                <i class="fa fa-backward" aria-hidden="true"></i>
+                <i class="fa fa-play-circle-o" id="play" aria-hidden="true"></i>
+                <i class="fa fa-forward" aria-hidden="true"></i>
+
+                <div>
+                    <p>
+                        <a href="audio/audio1.mp3" download="Beliver by Imagine Dragons"> Download the file</a>
+                    </p>
+                </div>
+            </div>
+
         </div>
 
 
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>

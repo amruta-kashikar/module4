@@ -22,9 +22,15 @@ body {
     margin: 0px auto;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.051);
 }
+.leftside ul li img {
+    width: 30px;
+    height: 30px;
+}
+
 .leftside ul {
     text-align: center;
     list-style: none;
+    padding-left: 20px;
 }
 .leftside h3 {
     margin-top: 20px;
@@ -33,6 +39,11 @@ body {
 .leftside .nav__email{
     color: #ccc;
 }
+.leftside .nav_menuitems  {
+    margin-bottom: 30px;
+    padding-left: ;
+    
+  }
 .nav_menuitems a{
     font-size: 20px;
     font-weight: 600;
@@ -41,6 +52,11 @@ body {
 }
 .nav_menuitems a:hover {
     color: black;
+}
+.nav_menuitems a img{
+    vertical-align: middle;
+    border-style: none;
+
 }
 .active a{
     color: black;
@@ -64,22 +80,24 @@ body {
 .main {
     flex: 1;
 }
+.input_contain {
+    max-width: 400px;
+    margin-top: 50px;
+    
+}
+.input_button {
+    border: 1px solid #ccc;
+    border-right: 0px;
+    border-radius: 10px 0 0 10px !important;
+}
+.input_field {
+    border-radius: 0 10px 10px 0 !important;
+    border-left: 0px;
+}
+.input_field::placeholder {
 
-.main input[type=text] {
-    padding: 6px;
-    border: none;
-    margin-top: 80px;
-    font-size: 17px;
-    border-radius: 5px;
 }
-.main button {
-    margin-left: 40px;
-    color: rgb(156, 151, 151);
-    font-size: 17px;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #f5f5fb;
-}
+
 .main .heading {
     margin-top: 40px;
     margin-left: 60px;
@@ -142,6 +160,41 @@ body {
     margin-top: 40px;
     margin-left: 60px;
 }
+.song {
+    background-color: #fff;
+    padding: 10px 30px;
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+}
+.song:hover {
+    background-color: black;
+}
+.song span {
+    padding: 0px 10px;
+}
+.song img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.song .song_name {
+    font-weight: 500;
+    flex: 1;
+    text-align: center;
+}
+.song .song_number {
+    font-size: 50px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    opacity: 50%;
+}
+.song .fa {
+    color: red;
+}
+
 
 /* right sidebar */
 .rightside {
@@ -169,4 +222,26 @@ body {
     width: 180px;
     margin-left: 40px;
     border: 8px solid rgb(162, 106, 236);
+}
+.controller .fa {
+    margin-top: 30px;
+    font-size: 40px;
+    padding-left: 30px;
+}
+.controller p {
+    margin-top: 30px;
+}
+.animate {
+    animation: rotateplayer 5s linear infinite;
+}
+@keyframes rotateplayer {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.musicimg:hover{
+    transform: translateY(-5px);
 }
